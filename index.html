@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar fixed-top bg-transparent navbar-expand-md navbar-dark">
-        <a class="navbar-brand d-flex justify-content-center align-items-center" href="#"><div class="nav-logo"></div></a>
+    <nav class="navbar fixed-top bg-transparent navbar-expand-lg navbar-dark">
+        <a class="navbar-brand d-flex justify-content-center align-items-center ml-3" href="#"><div class="nav-logo"></div></a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mt-2 mt-lg-0 ml-auto text-uppercase">
+            <ul class="navbar-nav mt-2 mt-lg-0 ml-auto mr-3 text-uppercase">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -38,25 +40,60 @@
             </ul>
         </div>
     </nav>
+    <div class="progress-container">
+            <div class="progress-bar"></div>
+    </div> 
 
     <header class=" d-flex justify-content-center align-items-center container">
         <div class="video-container">
             <video playsinline autoplay muted loop id="video-bg" src="img/videobg.mp4"></video>
         </div>
-        <h1>
-            We are here for managing fund data
+        <h1 class="typewrite">
+            We are here for</br>
+            <span></span>
+            <span id="cursor"></span>
         </h1>    
     </header>
 
-    <section class="wrapper"> 
-
+    <section class="wrapper about-us"> 
+        <div class="container-fluid">
+            <div class="section-data pt-5">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 section-index">01</div>
+                    <div class="col-md-8 section-heading text-uppercase">Genreal presentation</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6 section-sub-heading">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates modi, atque quia iusto eius accusamus natus.</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6 section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui aspernatur enim molestias cum exercitationem consectetur, maxime velit officia, fugiat tempore cupiditate voluptates voluptatum debitis harum. Nemo quo blanditiis architecto reiciendis quibusdam culpa accusantium, distinctio totam saepe et voluptatibus officia.</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6 know-more">
+                        <button class="">Know more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="wrapper">
-
+    <section class="wrapper services">
+            <div class="container-fluid">
+                    <div class="section-data pt-5">
+                        <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 section-index">02</div>
+                        <div class="col-md-8 section-heading text-uppercase">What we do</div>
+                    </div>    
+                </div>
+            </div>
     </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="main.js"></script>
