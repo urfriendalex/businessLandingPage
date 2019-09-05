@@ -103,7 +103,6 @@ header{
     color: rgba(212, 170, 106, 0.726);
 }
 
-
 .navbar-brand .nav-logo{
     height: 40px;
     width: 120px;
@@ -187,21 +186,31 @@ nav.scrolled{
     letter-spacing: 0.1em;
     font-family: Poppins sans-serif;
 }
+
+.section-index p{
+    display: inline;
+}
+.section-index p:hover{
+    color: rgba(212, 170, 106);
+}
+
 .section-heading{
-    color: rgb(110, 107, 107);
-    font-weight: 600;
+    color: rgb(66, 64, 64);
+    font-weight: 400;
     letter-spacing: 0.2em;
     font-size: 1.5em;
 }
 
-.section-sub-heading{
-    color: rgb(110, 107, 107);
-    margin: 1% 0;
+.section-sub-heading h1{
+    color: rgb(75, 72, 72);
+    font-weight: 400;
+    padding: 1% 0;
 }
 
 .section-text{
     font-size: 1.5em;
-    color: rgb(26, 26, 26);
+    color: rgb(71, 70, 70);
+    font-weight: 300;
 }
 
 .know-more{
@@ -216,10 +225,38 @@ nav.scrolled{
     text-transform: uppercase;
     letter-spacing: 2px;
     color: rgb(26, 26, 26);
-    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.know-more button:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 
 .services{
     background: rgb(26, 26, 26)
+}
+
+.services .section-heading{
+    color: rgb(196, 193, 193);
+}
+
+.service i{
+    font-size: 2.5em;
+    margin: 7% 0;
+    color: rgba(212, 170, 106, 0.726);
+}
+
+.service i:hover{
+    color: rgba(212, 170, 106);
+}
+
+.service-title {
+    font-size: 1.6em;
+    color: white;
+    font-weight: lighter;
+}
+
+.service{
+    margin: 3% 0;
 }
