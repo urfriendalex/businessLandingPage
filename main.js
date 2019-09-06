@@ -88,3 +88,19 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.querySelector(".progress-bar").style.width = scrolled + "%";
 }
+
+var knowMoreBtn = document.querySelector(".know-more button");
+
+knowMoreBtn.addEventListener('click', function(){
+	var circle = document.createElement('div');
+	this.appendChild(circle);
+	var d = Math.max(this.clientWidth, this.clientHeight)
+	circle.style.width = circle.style.height = d + 'px';
+	circle.classList.add('ripple');
+	
+	console.log(event.clientY);
+
+	circle.style.left =  event.offsetX - d/2 + 'px';
+	circle.style.top = event.offsetY - d/2 + 'px';
+
+})
