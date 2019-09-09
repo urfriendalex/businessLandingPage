@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	$( ".navbar-toggler" ).addClass('collapsed');
+});
+
 $(function () {
     $(document).scroll(function () {
       var $nav = $(".navbar");
@@ -6,43 +10,46 @@ $(function () {
   });
 
 
+
+
+
 // List of sentences
-var _CONTENT = [ 
+var content = [ 
 	"you.", 
 	"your service.", 
 	"managing fund data.", 
 ];
 
 // Current sentence being processed
-var _PART = 0;
+var curr_part = 0;
 
 // Character number of the current sentence being processed 
-var _PART_INDEX = 0;
+var part_index = 0;
 
 // Holds the handle returned from setInterval
-var _INTERVAL_VAL;
+var interval_val;
 
 // Element that holds the text
-var _ELEMENT = document.querySelector(".typewrite span");
+var element = document.querySelector(".typewrite span");
 
 // Cursor element 
-var _CURSOR = document.querySelector("#cursor");
+var cursor = document.querySelector("#cursor");
 
 // Implements typing effect
 function Type() { 
 	// Get substring with 1 characater added
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX++;
+	var text =  content[curr_part].substring(0, part_index + 1);
+	element.innerHTML = text;
+	part_index++;
 
 	// If full sentence has been displayed then start to delete the sentence after some time
-	if(text === _CONTENT[_PART]) {
+	if(text === content[curr_part]) {
 		// Hide the cursor
-		_CURSOR.style.backgroundColor = 'transparent';
+		cursor.style.backgroundColor = 'transparent';
 
-		clearInterval(_INTERVAL_VAL);
+		clearInterval(interval_val);
 		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Delete, 50);
+			interval_val = setInterval(Delete, 50);
 		}, 1000);
 	}
 }
@@ -50,57 +57,63 @@ function Type() {
 // Implements deleting effect
 function Delete() {
 	// Get substring with 1 characater deleted
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX--;
+	var text =  content[curr_part].substring(0, part_index - 1);
+	element.innerHTML = text;
+	part_index--;
 
 	// If sentence has been deleted then start to display the next sentence
 	if(text === '') {
-		clearInterval(_INTERVAL_VAL);
+		clearInterval(interval_val);
 
 		// If current sentence was last then display the first one, else move to the next
-		if(_PART == (_CONTENT.length - 1))
-			_PART = 0;
+		if(curr_part == (content.length - 1))
+			curr_part = 0;
 		else
-			_PART++;
+			curr_part++;
 		
-		_PART_INDEX = 0;
+		part_index = 0;
 
 		// Start to display the next sentence after some time
 		setTimeout(function() {
-			_CURSOR.style.display = 'inline-block';
-			_INTERVAL_VAL = setInterval(Type, 100);
+			cursor.style.display = 'inline-block';
+			interval_val = setInterval(Type, 100);
 		}, 200);
 	}
 }
 
 // Start the typing effect on load
-_INTERVAL_VAL = setInterval(Type, 100);
+interval_val = setInterval(Type, 100);
 
 
 
 
-window.onscroll = function() {myFunction()};
 
-function myFunction() {
+window.onscroll = function() {processBar()};
+
+function processBar() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.querySelector(".progress-bar").style.width = scrolled + "%";
 }
 
+
+
+
+
 var knowMoreBtn = document.querySelector(".know-more button");
 
-knowMoreBtn.addEventListener('click', function(){
-	var circle = document.createElement('div');
+knowMoreBtn.addEventListener('click',addRippleCircle);
+
+function addRippleCircle(event){
+	var circle = document.querySelector("div.ripple");
+	if(!circle)
+		circle = document.createElement('div');
 	this.appendChild(circle);
+	circle.classList.add('ripple');
 	var d = Math.max(this.clientWidth, this.clientHeight)
 	circle.style.width = circle.style.height = d + 'px';
-	circle.classList.add('ripple');
-	
-	console.log(event.clientY);
-
 	circle.style.left =  event.offsetX - d/2 + 'px';
 	circle.style.top = event.offsetY - d/2 + 'px';
+}
 
-})
