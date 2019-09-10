@@ -216,7 +216,7 @@ nav.scrolled{
     margin: 1% 0;
 }
 
-.know-more button{
+.know-more button, #submitEmail{
     outline: none;
     background: none;
     border: .3pt solid rgba(212, 170, 106, 0.726);
@@ -229,11 +229,11 @@ nav.scrolled{
     position: relative;
 }
 
-.know-more button:hover {
+.know-more button:hover, #submitEmail:hover {
   box-shadow: 0 8px 14px rgba(0,0,0,0.22), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.know-more button .ripple{
+.know-more button .ripple, #submitEmail .ripple{
     border-radius: 50%;
     background-color: rgba(212, 170, 106,0.8);
     position: absolute;
@@ -340,4 +340,74 @@ nav.scrolled{
 .newsletter{
     background: rgb(26, 26, 26);
     height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-group h1{
+    color: white;
+    padding: 2%;
+    margin-bottom: 3%;
+    font-weight: 200;
+    letter-spacing: 0.075em;
+}
+
+.inputWrapper{
+    width: 75%;
+    position: relative;
+}
+
+.form-control, .form-control:enabled, .form-control:focus, .form-control:active{
+    background: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(196, 193, 193);
+    border-radius: 0;
+    position: relative;
+    height: 3em;
+    text-align: center;
+    /* not sure bout text align */
+}
+
+.form-control::placeholder{
+    color: rgba(212, 170, 106, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.form-control:focus::placeholder{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.inputWrapper::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: rgb(212, 170, 106);
+    transition: all .4s ease-in-out;
+}
+
+.inputWrapper:focus-within::after, .inputWrapper:hover::after{
+    width: 100%;
+}
+
+
+#submitEmail{
+    margin-top: 3%;
+    background: transparent;
+    color: white;
+    border: 1px solid rgb(212, 170, 106);
 }

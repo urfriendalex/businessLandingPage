@@ -102,11 +102,14 @@ function processBar() {
 
 
 var knowMoreBtn = document.querySelector(".know-more button");
+var submitEmailBtn = document.querySelector("#submitEmail");
+
 
 knowMoreBtn.addEventListener('click',addRippleCircle);
+submitEmailBtn.addEventListener('click',addRippleCircle);
 
 function addRippleCircle(event){
-	var circle = document.querySelector("div.ripple");
+	var circle = document.querySelector(this.nodeName+".ripple");
 	if(!circle)
 		circle = document.createElement('div');
 	this.appendChild(circle);
