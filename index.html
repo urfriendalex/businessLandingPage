@@ -4,12 +4,15 @@
     <title>12VENTURES</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar fixed-top bg-transparent navbar-expand-lg navbar-dark">
+    <nav class="navbar fixed-top bg-transparent navbar-expand-lg navbar-dark wow fadeInDown">
         <a class="navbar-brand d-flex justify-content-center align-items-center ml-3" href="#"><div class="nav-logo"></div></a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -18,22 +21,22 @@
             <span></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mt-2 mt-lg-0 ml-auto mr-3 text-uppercase">
+            <ul class="navbar-nav mt-4 mt-lg-0 ml-auto mr-3 text-uppercase">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Our Team</a>
+                    <a class="nav-link" href="#team">Our Team</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -42,103 +45,103 @@
             <div class="progress-bar"></div>
     </div> 
 
-    <section class="hero d-flex justify-content-center align-items-center container">
+    <section id="home" class="hero d-flex justify-content-center align-items-center">
         <div class="video-container">
             <video playsinline autoplay muted loop id="video-bg" src="img/videobg.mp4"></video>
         </div>
-        <h1 class="typewrite">
-            We are here for</br>
+        <h1 class="typewrite wow fadeIn"  data-wow-delay="1.3s">
+            We are here for
+            </br>
             <span></span>
             <span id="cursor"></span>
         </h1>    
     </section>
-
-    <section class="wrapper about-us"> 
+    <section id="about" class="wrapper about-us"> 
         <div class="container-fluid">
-            <div class="section-data pt-5">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-2 section-index"><p>01</p></div>
-                    <div class="col-md-8 section-heading text-uppercase">Genreal presentation</div>
+            <div class="section-data py-5">
+                <div class="row pb-3">
+                    <div class="col-lg-2"></div>
+                    <div class="col-md-2 section-index wow fadeInUp"><p>01</p></div>
+                    <div class="col-md-8 section-heading text-uppercase wow fadeInUp" data-wow-delay="0.2s">Genreal presentation</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-6 section-sub-heading">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-6 section-sub-heading wow fadeInUp" data-wow-delay="0.3s">
                         <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates modi, atque quia iusto eius accusamus natus.</h1></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-6 section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui aspernatur enim molestias cum exercitationem consectetur, maxime velit officia, fugiat tempore cupiditate voluptates voluptatum debitis harum. Nemo quo blanditiis architecto reiciendis quibusdam culpa accusantium, distinctio totam saepe et voluptatibus officia.</div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-6 section-text wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore qui aspernatur enim molestias cum exercitationem consectetur, maxime velit officia, fugiat tempore cupiditate voluptates voluptatum debitis harum. Nemo quo blanditiis architecto reiciendis quibusdam culpa accusantium, distinctio totam saepe et voluptatibus officia.</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-6 know-more">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-6 know-more wow fadeInUp" data-wow-delay="0.5s">
                         <button>Know more</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="wrapper services">
+    <section id="services" class="wrapper services">
             <div class="container-fluid">
                 <div class="section-data py-5">
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2 section-index"><p>02</p></div>
-                        <div class="col-md-8 section-heading text-uppercase">What we do</div>
+                    <div class="row pb-3">
+                        <div class="col-lg-2"></div>
+                        <div class="col-md-2 section-index wow fadeInUp"><p>02</p></div>
+                        <div class="col-md-8 section-heading text-uppercase wow fadeInUp" data-wow-delay="0.2s">What we do</div>
                     </div>
                     <div class="row service">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-3">
-                            <div class="col-md-12">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
                                 <i class="fas fa-fingerprint"></i>
                             </div>
-                            <div class="service-title col-12">Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                            <div class="service-title col-12 wow fadeInUp" data-wow-delay="0.5s">Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing.</div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="col-12">
+                        <div class="col-lg-3">
+                            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                                 <i class="fas fa-link"></i>
                             </div>
-                            <div class="service-title col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolorum!</div>
+                            <div class="service-title col-12 wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolorum!</div>
                         </div>
                     </div>
                     <div class="row service">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-3">
-                            <div class="col-md-12">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.4s">
                                 <i class="fas fa-cloud"></i>
                             </div>
-                            <div class="service-title col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas nihil unde.</div>
+                            <div class="service-title col-12 wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas nihil unde.</div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="col-md-12">
+                        <div class="col-lg-3">
+                            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.4s">
                                 <i class="fas fa-share-alt"></i>
                             </div>
-                            <div class="service-title col-12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, sunt?</div>
+                            <div class="service-title col-12 wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, sunt?</div>
                         </div>
                     </div>
                 </div>
             </div>                
     </section>
-    <section class="wrapper team">
+    <section id="team" class="wrapper team">
         <div class="container-fluid">
             <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-2 section-index"><p>03</p></div>
-                    <div class="col-md-8 section-heading text-uppercase">Our Team</div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-md-2 section-index wow fadeInUp"><p>03</p></div>
+                    <div class="col-md-8 section-heading text-uppercase wow fadeInUp">Our Team</div>
             </div>
             <div class="row members mt-5">
-                <div class="col-md-4"></div>
-                <div class="col-md-3">
-                    <div id='member-one' class="team-member overflow-hidden"></div>
-                    <div class="member-title mt-3">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-3">
+                    <div id='member-one' class="team-member overflow-hidden wow fadeIn" data-wow-delay="0.3s"></div>
+                    <div class="member-title mt-3 wow fadeInUp" data-wow-delay="0.6s">
                         <h5>Monica Geller</h5>
                         <h6>Founder & CEO</h6>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div id='member-two' class="team-member overflow-hidden"></div>
-                    <div class="member-title mt-3">
+                <div class="col-lg-3">
+                    <div id='member-two' class="team-member overflow-hidden wow fadeIn" data-wow-delay="0.3s"></div>
+                    <div class="member-title mt-3 wow fadeInUp" data-wow-delay="0.6s">
                         <h5>Joey Tribbiani</h5>
                         <h6>Co-founder</h6>
                     </div>
@@ -147,9 +150,9 @@
         </div>
     </section>
     <section class="wrapper newsletter">
-        <div class="container">
-            <form class="form-group">
-                <h1 class="mail">Subscribe to our newsletter <i class="fas fa-newspaper"></i></h1>
+        <div class="container-fluid">
+            <form class="form-group wow fadeInUp">
+                <h1 class="mail text-center">Subscribe to our newsletter</h1>
                 <div class="inputWrapper">
                     <input type="email" class="form-control col-12" placeholder="Enter your email">
                 </div>
@@ -157,58 +160,66 @@
             </form>    
         </div>
     </section>
-    <section class="wrapper contact">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-2 section-index"><p>04</p></div>
-            <div class="col-md-8 section-heading text-uppercase">Contact Us</div>
-         </div>
-        <div class="row my-4">
-            <div class="col-md-4"></div>
-                    <div class="col-md-6 icon-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste temporibus optio similique possimus sequi, mollitia expedita.</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-6">
-                        <form action="" name="contact-form" class="d-flex flex-column" id="contact-from">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <div class="inputWrapper">
-                                        <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Name"> 
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inputWrapper">
-                                        <input type="text" name="contact-mail" class="form-control" id="contact-mail" placeholder="Email"> 
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inputWrapper">
-                                        <textarea type="text" name="contact-msg" class="form-control" id="contact-msg" placeholder="Message"></textarea> 
-                                    </div>
-                                </li>
-                            </ul>
-                            <button type="submit" class="btn align-self-center" id="contact-submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-        </section>
-        <footer>
-            <div class="row text-white d-flex justify-content-around w-100">
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <address>
-                        Some str
-                    </address>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <i class="fas fa-bitcoin"></i>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    smth
+
+    <section id="contact" class="wrapper contact">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-md-2 section-index wow fadeInUp"><p>04</p></div>
+                <div class="col-md-8 section-heading text-uppercase wow fadeInUp">Contact Us</div>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-4"></div>
+                <div class="col-lg-6 icon-title wow fadeInUp" data-wow-delay="0.3s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste temporibus optio similique possimus sequi, mollitia expedita.</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-6">
+                    <form action="" name="contact-form" class="d-flex flex-column" id="contact-from">
+                        <ul class="list-unstyled">
+                            <li class="wow fadeInLeft" data-wow-delay="0.4s">
+                                <div class="inputWrapper">
+                                    <input type="text" name="contact-name" class="form-control" id="contact-name" placeholder="Name"> 
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-delay="0.6s">
+                                <div class="inputWrapper">
+                                    <input type="text" name="contact-mail" class="form-control" id="contact-mail" placeholder="Email"> 
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-delay="0.8s">
+                                <div class="inputWrapper">
+                                    <textarea type="text" name="contact-msg" class="form-control" id="contact-msg" placeholder="Message"></textarea> 
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn align-self-center wow fadeInUp" id="contact-submit" data-wow-delay="1.5s">Submit</button>
+                    </form>
                 </div>
             </div>
+        </div>
+        </section>
+        <footer>
+            <div class="row d-flex justify-content-around w-100 wow fadeInDown" data-wow-delay="1s">
+                <div class="col-md-3 col-6 d-flex justify-content-center align-items-center">
+                    <address>
+                        <a href="https://goo.gl/maps/uj17DA66Xu2R5sKz6" class="text-decoration-none h6">156 E 7th St <br> New York, NY 10009<br>USA</a>
+                    </address>
+                </div>
+                <div class="col-md-3 col-6 d-flex justify-content-center align-items-center flex-column">
+                    <div class="h5 text-center text-light text-uppercase mb-1">Say hi<i class="ml-3 fas fa-hand-peace"></i></div>
+                    <a class="text-decoration-none" href="mailto:contact@12ventures.com">contact@12ventures.com</a>
+                </div>
+                <ul class="col-md-3 d-none footer-links d-md-flex justify-content-around align-items-center h2">
+                    <li><a href=""><i class="fas fa-piggy-bank"></i></a></li>
+                    <li><a href=""><i class="fas fa-money-bill"></i></a></li>
+                    <li><a href=""><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
         </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="main.js"></script>

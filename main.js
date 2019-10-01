@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$('html, body').animate({
+		scrollTop: 0
+	}, 1000)
+});
+
+$(document).ready(function(){
 	$( ".navbar-toggler" ).addClass('collapsed');
 });
 
@@ -7,8 +13,7 @@ $(function () {
       var $nav = $(".navbar");
       $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
-  });
-
+});
 
 
 
@@ -124,3 +129,49 @@ function addRippleCircle(event){
 	circle.style.top = event.offsetY - d/2 + 'px';
 }
 
+
+$(document).ready(function () {
+    var scrollLink = $('nav a');
+    scrollLink.on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
+
+    $(window).scroll(function () {
+		var scrollLink = $('.nav-link'); 
+		var scrollbarLocation = $(this).scrollTop();
+		
+        scrollLink.each(function () {
+            var sectionOffset = $(this.hash).offset().top - 340;
+
+            if (sectionOffset <= scrollbarLocation) {
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+            }
+        })
+	});
+});
+
+
+function adaptContainer() {
+	if ($(window).width() <= 980)
+		$(".container-fluid").attr('class', 'container');
+	else
+		$(".container").attr('class', 'container-fluid')
+}	
+
+$(window).on('resize', function(event){
+	adaptContainer();
+});
+
+$(document).ready(() => {
+	adaptContainer();
+  }
+);
