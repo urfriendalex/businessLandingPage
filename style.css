@@ -492,4 +492,14 @@ footer a:hover{
     color: rgb(212, 170, 106);
 }
 
+footer address{
+    font-size: 1em;
+}
+
+@media (max-width: 474px){
+    footer {
+        font-size: 0.7em;
+    }
+
+}
 
